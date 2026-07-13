@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "sharing-vision-2023",
+		"name": "SharingVision",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Article",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"This is a sample article title\",\n    \"content\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\",\n    \"category\": \"tech\",\n    \"status\": \"draft\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/article",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"article"
+					]
+				}
+			}
+		},
+		{
+			"name": "Get Article List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/article/10/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"article",
+						"10",
+						"0"
+					]
+				}
+			}
+		},
+		{
+			"name": "Get Article Detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/article/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"article",
+						"1"
+					]
+				}
+			}
+		},
+		{
+			"name": "Update Article",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Updated article title here\",\n    \"content\": \"Updated content lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\",\n    \"category\": \"news\",\n    \"status\": \"publish\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/article/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"article",
+						"1"
+					]
+				}
+			}
+		},
+		{
+			"name": "Delete Article",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/article/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"article",
+						"1"
+					]
+				}
+			}
+		}
+	]
+}
