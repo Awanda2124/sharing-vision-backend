@@ -106,6 +106,7 @@ func (s *postService) Delete(ctx context.Context, id int) error {
 
 func toPostResponse(post model.Post) dto.PostResponse {
 	return dto.PostResponse{
+		ID:       post.ID,
 		Title:    post.Title,
 		Content:  post.Content,
 		Category: post.Category,
